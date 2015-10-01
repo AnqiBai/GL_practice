@@ -20,91 +20,68 @@ window.onload = function() {
 	var mesh = new THREE.Geometry();
         
         // vertives
-        var pt0 = new THREE.Vector3(-10,10,5);
+        var pt0 = new THREE.Vector3(0,0,0);
            
           var sphere = new THREE.SphereGeometry( 0.5);
 var material = new THREE.MeshBasicMaterial( {color: 0x000000} );
 var ball0 = new THREE.Mesh( sphere, material );
-ball0.applyMatrix( new THREE.Matrix4().makeTranslation(-10, 10, 5) );
+ball0.applyMatrix( new THREE.Matrix4().makeTranslation(0, 0, 0) );
 scene.add( ball0 );
 
-        var pt1 = new THREE.Vector3(-8,4,4);
+        var pt1 = new THREE.Vector3(10,0,0);
         material1 = new THREE.MeshBasicMaterial( {color: 0x202000} );
 var ball1 = new THREE.Mesh( sphere, material1 );
-ball1.applyMatrix( new THREE.Matrix4().makeTranslation(-8, 4, 4) );
+ball1.applyMatrix( new THREE.Matrix4().makeTranslation(10, 0, 0) );
 scene.add( ball1 );
-        var pt2 = new THREE.Vector3(-7,6,0);
+        var pt2 = new THREE.Vector3(10,0,10);
         material2 = new THREE.MeshBasicMaterial( {color: 0x302000} );
 var ball2 = new THREE.Mesh( sphere, material2 );
-ball2.applyMatrix( new THREE.Matrix4().makeTranslation(-7, 6, 0) );
+ball2.applyMatrix( new THREE.Matrix4().makeTranslation(10,0,10) );
 scene.add( ball2 );
-        var pt3 = new THREE.Vector3(0,4,8);
+        var pt3 = new THREE.Vector3(0,0,10);
         material3 = new THREE.MeshBasicMaterial( {color: 0x404000} );
 var ball3 = new THREE.Mesh( sphere, material3 );
-ball3.applyMatrix( new THREE.Matrix4().makeTranslation(0, 4, 8) );
+ball3.applyMatrix( new THREE.Matrix4().makeTranslation(0,0,10));
 scene.add( ball3 );
-        var pt4 = new THREE.Vector3(2,4,6);
+        var pt4 = new THREE.Vector3(0,10,0);
         material4 = new THREE.MeshBasicMaterial( {color: 0x505000} );
 var ball4 = new THREE.Mesh( sphere, material4 );
-ball4.applyMatrix( new THREE.Matrix4().makeTranslation(2, 4, 6) );
+ball4.applyMatrix( new THREE.Matrix4().makeTranslation(0,10,0) );
 scene.add( ball4 );
-        var pt5 = new THREE.Vector3(-7,-7,-7);
+        var pt5 = new THREE.Vector3(10,10,0);
         material5 = new THREE.MeshBasicMaterial( {color: 0x707000} );
 var ball5 = new THREE.Mesh( sphere, material5 );
-ball5.applyMatrix( new THREE.Matrix4().makeTranslation(-7, -7, -7) );
+ball5.applyMatrix( new THREE.Matrix4().makeTranslation(10,10,0));
 scene.add( ball5 );
-        var pt6 = new THREE.Vector3(4,10,6);
+        var pt6 = new THREE.Vector3(10,10,10);
         material6 = new THREE.MeshBasicMaterial( {color: 0x808000} );
 var ball6 = new THREE.Mesh( sphere, material6 );
-ball6.applyMatrix( new THREE.Matrix4().makeTranslation(4, 10, 6) );
+ball6.applyMatrix( new THREE.Matrix4().makeTranslation(10,10,10) );
 scene.add( ball6 );
-        var pt7 = new THREE.Vector3(4,3,2);
+        var pt7 = new THREE.Vector3(0,10,10);
         material7 = new THREE.MeshBasicMaterial( {color: 0x909000} );
 var ball7 = new THREE.Mesh( sphere, material7 );
-ball7.applyMatrix( new THREE.Matrix4().makeTranslation(4, 3, 2) );
+ball7.applyMatrix( new THREE.Matrix4().makeTranslation(0,10,10) );
 scene.add( ball7 );
-        var pt8 = new THREE.Vector3(0,8,9);
-        material8 = new THREE.MeshBasicMaterial( {color: 0xa0a000} );
-var ball8 = new THREE.Mesh( sphere, material8 );
-ball8.applyMatrix( new THREE.Matrix4().makeTranslation(0, 8, 9) );
-scene.add( ball8 );
-        var pt9 = new THREE.Vector3(7,6,0);
-        material9= new THREE.MeshBasicMaterial( {color: 0xc0c000} );
-var ball9 = new THREE.Mesh( sphere, material9 );
-ball9.applyMatrix( new THREE.Matrix4().makeTranslation(7, 6, 0) );
-scene.add( ball9 );
-        var pt10 = new THREE.Vector3(3,4,5);
-        material10 = new THREE.MeshBasicMaterial( {color: 0xf0f000} );
-var ball10 = new THREE.Mesh( sphere, material10 );
-ball10.applyMatrix( new THREE.Matrix4().makeTranslation(3, 4, 5) );
-scene.add( ball10 );
-
-        mesh.vertices.push(pt0,pt1,pt2,pt3,pt4,pt5,pt6,pt7,pt8,pt9,pt10);
+        
+        mesh.vertices.push(pt0,pt1,pt2,pt3,pt4,pt5,pt6,pt7);
 
         // triangles 
-        var face0 = new THREE.Face3(1,2,5);
-
-         var _face0 = new THREE.Face3(2,1,5);
-        var face1 = new THREE.Face3(2,0,5);
-         var _face1 = new THREE.Face3(0,2,5);
-        var face2 = new THREE.Face3(0,1,5);
-         var _face2 = new THREE.Face3(1,0,5);
-        var face3 = new THREE.Face3(4,3,5);
-         var _face3 = new THREE.Face3(3,4,5);
-        var face4 = new THREE.Face3(4,6,3);
-         var _face4 = new THREE.Face3(6,4,3);
-        var face5 = new THREE.Face3(4,7,3);
-          var _face5 = new THREE.Face3(7,4,3);
-        var face6 = new THREE.Face3(10,4,5);
-         var _face6 = new THREE.Face3(4,10,5);
-        var face7 = new THREE.Face3(3,10,5);
-         var _face7 = new THREE.Face3(10,3,5);
-        var face8 = new THREE.Face3(8,10,9);
-         var _face8 = new THREE.Face3(10,8,9);
-
-        mesh.faces.push(face0,face1, face2, face3, face4, face5, face6, face7, face8,
-                        _face0,_face1, _face2, _face3, _face4, _face5, _face6, _face7, _face8);
-
+        var face0 = new THREE.Face3(0,2,5);
+     //    var _face0 = new THREE.Face3(2,1,5);
+        var face1 = new THREE.Face3(0,5,7);
+     //    var _face1 = new THREE.Face3(0,2,5);
+        var face2 = new THREE.Face3(0,7,2);
+     //    var _face2 = new THREE.Face3(1,0,5);
+        var face3 = new THREE.Face3(2,5,7);
+     //    var _face3 = new THREE.Face3(3,4,5);
+      //  var face4 = new THREE.Face3(4,6,3);
+     //    var _face4 = new THREE.Face3(6,4,3);
+    //    var face5 = new THREE.Face3(4,7,3);
+    //      var _face5 = new THREE.Face3(7,4,3);
+      
+   //     mesh.faces.push(face0,face1, face2, face3, face4, face5, _face0,_face1, _face2, _face3, _face4, _face5);
+       mesh.faces.push(face0, face1, face2, face3);
     var cube = new THREE.Mesh(mesh,meshMaterial);
 	scene.add(cube);
 	// Add axes
